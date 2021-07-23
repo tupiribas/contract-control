@@ -21,10 +21,11 @@ public class Program {
 		System.out.println("Enter departament's name: ");
 		String nameDepartament = sc.nextLine();
 
+		// Dados do usuário
 		System.out.print("Nome: ");
 		String nameWorker = sc.next();
 		System.out.print("Level: ");
-		String workerLevel = sc.next();
+		String workerLevel = sc.next().toUpperCase();
 		System.out.print("Base salary: ");
 		double salary = sc.nextDouble();
 
@@ -47,6 +48,7 @@ public class Program {
 
 			HourContract hc = new HourContract(dataAtual, value, duration);
 			worker.addContract(hc);
+			i++;
 		}
 
 		System.out.print("Enter month and year to calculate income (MM/YYYY)");
